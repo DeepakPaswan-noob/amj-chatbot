@@ -3,11 +3,10 @@ flask-cors==4.0.0
 nltk==3.8.1
 # AI / NLP stack (versions aligned for compatibility)
 huggingface-hub==0.25.2
-transformers==4.40.2
-sentence-transformers==2.7.0
-torch==2.2.2
-torchvision==0.17.2
-accelerate==0.30.1
+# NOTE: heavy ML packages (transformers, sentence-transformers, torch, tokenizers)
+# are split into `requirements-ml.txt` to avoid build failures on hosts without
+# Rust or platform-specific wheels. If you need the ML tools, install them with:
+#   pip install -r requirements-ml.txt
 
 # (Optional) numpy explicitly if needed
 numpy>=1.24.0
