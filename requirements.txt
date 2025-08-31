@@ -12,7 +12,7 @@ sentence-transformers==2.7.0
 torch
 # torchvision should be compatible with the selected torch version; keep a
 # permissive range rather than pinning a single patch release.
-torchvision>=0.17.2,<0.19.0
+torchvision
 accelerate>=0.30.1
 
 # (Optional) numpy explicitly if needed
