@@ -1,0 +1,6 @@
+transformers==4.40.2
+sentence-transformers==2.7.0
+# torch builds are platform-specific; pick an available wheel for your host.
+torch
+torchvision
+accelerate>=0.30.1
