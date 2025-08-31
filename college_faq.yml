@@ -1,0 +1,131 @@
+faqs:
+  - id: admissions
+    question: Admissions
+    answer: |
+      📅 <b>Admissions</b>
+
+      <b>Application window:</b> Forms available March – May (dates vary each year).
+
+      <b>How to apply:</b>
+      - Visit the college website and fill the online application form.
+      - Submit required documents at the admissions office.
+
+      <b>Contact</b>
+      ☎️ 044-46622216 (Shift 1) | ☎️ 044-46622211 (Shift 2)
+      📧 shift1@amjaincollege.edu.in, shift2@amjaincollege.edu.in
+
+      ⚠️ <b>Tip:</b> Apply early to secure your seat!
+
+  - id: courses
+    question: Courses
+    answer: |
+      🎓 <b>Courses Offered</b>
+
+      <b>Undergraduate (UG)</b>
+      - B.Com (CA)
+      - B.Com (ISM)
+      - B.Sc (Computer Science)
+      - B.A (English)
+      - B.A (Economics)
+
+      <b>Postgraduate (PG)</b>
+      - M.Com
+      - M.Sc (Computer Science)
+
+      <i>Industry-relevant curriculum 🎓 with practical labs and internships.</i>
+
+  - id: placements
+    question: Placements
+    answer: |
+      🤝 <b>Placements & Recruiters</b>
+
+      <b>Top recruiters:</b> TCS, Wipro, Infosys, HCL, Accenture
+
+      <b>Placement support:</b>
+      - Mock interviews
+      - Resume & profile workshops
+      - On-campus drives
+
+      📧 placement@amjaincollege.edu.in
+
+  - id: fees
+    question: Fees
+    answer: |
+      💰 <b>Fee Overview</b>
+
+      <b>Undergraduate (average):</b> ₹35,000 – ₹50,000 / year
+      <b>Postgraduate (average):</b> ₹50,000 – ₹70,000 / year
+
+      <b>Payment modes:</b> Online / Offline (Cash / Cheque / DD)
+
+      For exact course fees, contact the admissions office.
+
+  - id: contact
+    question: Contact
+    answer: |
+      📍 <b>Address</b>
+      AM Jain College, Meenambakkam, Chennai – 600114
+
+      ☎️ <b>Phone:</b> 044-26630520
+      🌐 <b>Website:</b> https://amjaincollege.edu.in
+
+      For specific departments, use the emails provided in the relevant sections.
+categories:
+- college
+conversations:
+- - Hello
+  - Hi! How can I assist you with A. M. Jain College information?
+- - Where is the college located?
+  - A.M. Jain College is in Meenambakkam, Chennai. It is affiliated with the University of Madras.
+- - Is the college autonomous?
+  - Yes, A.M. Jain College is an autonomous institution under the University of Madras.
+- - When was the college established?
+  - The college was established in 1952 by Padmasri Mohanmulji Chhaganmulji.
+- - Is the college co-educational?
+  - Yes, A.M. Jain College is a co-educational institution.
+- - What undergraduate programs are offered?
+  - We offer UG programs in Arts, Commerce, Science, Management, Computer Applications, and Media Studies across Shift I and II.
+- - What postgraduate programs are available?
+  - The college offers M.Com, M.A. English, M.A. Economics, M.Sc. Mathematics, M.Sc. Chemistry, M.Sc. Physics, M.Sc. Computer Science, and MBA.
+- - Are Ph.D. programs available?
+  - Yes, A.M. Jain College offers Ph.D. programs in Commerce, English, and Chemistry.
+- - What are the college timings?
+  - Regular college timings are 9:00 AM to 4:00 PM.
+- - How much is the semester fee for B.Com. General?
+  - The B.Com. General program costs INR 38,300 per semester.
+- - What about B.A. Public Administration?
+  - That program costs INR 20,900 per semester.
+- - What’s the fee for B.Com. Accounting & Finance?
+  - It’s INR 37,000 per semester.
+- - And B.Sc. Chemistry?
+  - Its fee is as per Government norms and not listed explicitly.
+- - Does the college provide hostel facilities?
+  - Yes, hostel facilities are available separately for boys and girls.
+- - What are the library timings?
+  - The library is open from 8:30 AM to 6:00 PM on working days.
+- - How many books are in the library?
+  - The library has more than 50,000 volumes and access to e-resources.
+- - Is there a placement cell?
+  - Yes, the Placement Cell helps students with training, internships, and job opportunities. Many top companies recruit from AMJC.
+- - What is the college’s placement rate?
+  - In 2023–24, around 1,699 students were placed—equating to a placement rate of approximately 78.33 %.
+- - How were the placement rates in previous years?
+  - In 2022–23, the placement rate was 91.33 %, and in 2021–22 it was 86.06 %.
+- - Which companies recruit from the campus?
+  - Regular recruiters include TCS, Infosys, Wipro, HCL, ICICI Bank, and Tata.
+- - Does the college offer placement training?
+  - Yes, through collaborations with ICT Academy, Tally Academy, Buddha Academy, and TN Apex Skill Development Corp. They conduct soft-skills and technical sessions.
+- - What is the typical salary for B.Com. Computer Applications graduates?
+  - Freshers earn CTCs between INR 4 lakhs and 6 lakhs.
+- - What scholarships are available?
+  - Government scholarships, community scholarships, and merit-based scholarships are available for eligible students.
+- - What extracurricular activities are available?
+  - The college encourages sports, NSS, NCC, fine arts, cultural programs, and student clubs.
+- - Are there sports facilities?
+  - Yes, the campus has grounds for cricket, football, basketball, volleyball, and indoor games.
+- - Who is the principal of the college?
+  - The current Principal is Dr. Ramesh Kumar. (Please update if changed.)
+- - What is the admission process?
+  - You can apply online through the college website or visit the admission office. Admissions are merit-based.
+- - Bye
+  - Goodbye! Wish you a bright journey ahead.

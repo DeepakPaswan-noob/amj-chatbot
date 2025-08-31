@@ -1,0 +1,165 @@
+:root{
+    --amjc-primary: #7b1e1e;
+    --bg: #ffffff;
+    --bot: #f1f5f9;
+    --user: #fdecea;
+    --muted: #6b7280;
+}
+
+/* Layout */
+.chat-app{
+    width: 420px;
+    max-width: 96vw;
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.chat-header{padding:12px 16px; display:flex; align-items:center; justify-content:space-between; background:var(--amjc-primary); color:#fff}
+.chat-header h5{margin:0}
+.header-actions button{margin-left:8px}
+
+/* Header logo */
+.header-logo{width:36px; height:36px; object-fit:contain; border-radius:6px}
+
+.quick-replies{display:flex; gap:6px; padding:10px; background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); flex-wrap:wrap}
+.quick-replies .quick{background:#fff;border:1px solid #eee;padding:8px 12px;border-radius:20px;cursor:pointer; font-size:0.9rem}
+
+.chat-window{flex:1; background:var(--bg); padding:10px 12px; overflow:auto;}
+.chat-body{display:flex; flex-direction:column; gap:12px;}
+
+/* Improved touch scrolling for chat body */
+.chat-body, .chat-window{scroll-behavior: smooth; -webkit-overflow-scrolling: touch}
+
+/* Message styles */
+.message{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;            /* FIX: align avatars + bubbles at the top */
+    max-width:85%;
+    animation: popIn 220ms ease both
+}
+.message.bot-message{align-self:flex-start; padding-left:2px;}  /* tiny nudge */
+.message.user-message{align-self:flex-end; flex-direction:row-reverse; align-items:flex-end;}
+
+/* Avatar styles */
+.message-avatar{
+    flex: 0 0 40px;                    /* reserve space */
+    width:40px; height:40px;
+    border-radius:50%;
+    background: linear-gradient(135deg,#60a5fa,#2dd4bf);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    overflow:hidden
+}
+.message-avatar img.message-avatar-img{
+    width:100%; height:100%;
+    object-fit:contain;                /* FIX: logos don’t get cropped */
+    display:block;
+    background:#fff;                   /* optional backdrop for logos */
+    border-radius:50%;
+}
+
+/* Keep user avatar aligned to the bottom for visual parity */
+.message.user-message .message-avatar{align-self:flex-end}
+
+/* Message content */
+.message-content{display:flex; flex-direction:column; max-width:calc(100% - 50px);}
+.message-text{
+    background:var(--bot);
+    padding:10px 14px;
+    border-radius:12px;
+    box-shadow:0 4px 16px rgba(0,0,0,0.06);
+    line-height:1.35;
+    font-size:0.96rem
+}
+.message.user-message .message-text{background:var(--user); color:var(--amjc-primary)}
+.message-time{font-size:11px; color:var(--muted); margin-top:6px}
+
+.chat-footer{padding:10px; display:flex; gap:8px; align-items:center; border-top:1px solid #f1f1f1}
+.chat-footer input{flex:1; min-height:42px}
+
+.vote-bar{display:flex; gap:8px; margin-top:6px}
+.vote-btn{border:1px solid #eee; background:#fff; padding:6px 10px; border-radius:8px; cursor:pointer}
+
+/* Pop-in animation for messages */
+@keyframes popIn{
+    from{transform: translateY(8px) scale(0.98); opacity:0}
+    to{transform: translateY(0) scale(1); opacity:1}
+}
+
+/* Notification animations (already used in JS) */
+@keyframes slideIn{from{transform: translateX(18px); opacity:0}to{transform: translateX(0); opacity:1}}
+@keyframes slideOut{from{transform: translateX(0); opacity:1}to{transform: translateX(18px); opacity:0}}
+
+/* Responsive tweaks */
+@media (max-width: 900px){
+    .chat-app{width:360px; height:86vh}
+    .message-text{font-size:0.95rem}
+}
+
+@media (max-width: 480px){
+    .chat-app{width:100vw; height:100vh; border-radius:0}
+    .chat-header{padding:10px}
+    .quick-replies{padding:8px}
+    .message-avatar{width:34px;height:34px;font-size:15px}
+    .chat-footer input{min-height:44px}
+    .quick-replies .quick{padding:7px 10px; font-size:0.85rem}
+}
+
+/* Floating chat bubble widget styles */
+.chat-toggle{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 64px;
+    height: 64px;
+    border-radius: 999px;
+    background: linear-gradient(135deg,#2dd4bf,#60a5fa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(30,41,59,0.18);
+    border: none;
+    z-index: 1200;
+    cursor: pointer;
+}
+.chat-toggle:focus{outline: 2px solid rgba(96,165,250,0.3)}
+.chat-toggle svg{filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12))}
+.chat-toggle-badge{display:none; position:absolute; top:8px; left:8px; background:rgba(0,0,0,0.08); color:#fff; font-weight:600; font-size:12px; padding:3px 6px; border-radius:10px}
+
+/* Compact widget mode: body.widget-open shows a small popup */
+body.widget-open .chat-app{
+    position: fixed;
+    right: 20px;
+    bottom: 94px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    height: 520px;
+    box-shadow: 0 20px 48px rgba(15,23,42,0.22);
+    transform-origin: bottom right;
+    animation: popupIn 220ms ease both;
+    z-index: 1199;
+}
+
+@keyframes popupIn{from{transform: translateY(8px) scale(0.98); opacity:0}to{transform: translateY(0) scale(1); opacity:1}}
+
+/* Hide the main centered layout when widget is in use on small screens */
+@media (max-width: 600px){
+    body.widget-open .chat-app{right:12px; left:12px; bottom:80px;width:auto}
+    .chat-toggle{right:14px; bottom:14px}
+}
+
+/* Accessibility: focus states */
+.quick:focus, .vote-btn:focus, #send-btn:focus{outline:3px solid rgba(123,30,30,0.12); outline-offset:2px}
+
+/* Subtle hover for desktop */
+@media (hover: hover) and (pointer: fine){
+    .quick-replies .quick:hover{transform: translateY(-3px)}
+    .vote-btn:hover{transform: translateY(-2px)}
+}
