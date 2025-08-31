@@ -9,7 +9,7 @@ sentence-transformers==2.7.0
 # If you don't need embeddings/LLMs on the server, consider moving these to
 # a separate `requirements-ml.txt` and only install them when required.
 # Pick a torch version available on the PyPI index used by Render.
-torch>=2.5.0,<2.9.0
+torch
 # torchvision should be compatible with the selected torch version; keep a
 # permissive range rather than pinning a single patch release.
 torchvision>=0.17.2,<0.19.0
